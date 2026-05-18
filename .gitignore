@@ -1,0 +1,5 @@
+# Data exclusions
+*.csv
+*.xlsx
+*.json
+!environment.yml
