@@ -7,10 +7,10 @@ PaySim online payment dataset (~6 million transactions).  Two tree-based
 models are trained — `DecisionTreeClassifier` and `RandomForestClassifier` —
 using 5-fold stratified cross-validation.
 
-The pipeline corrects three deficiencies present in the original experimental
+The pipeline corrects three deficiencies present in the experimental jupyter
 notebook:
 
-| Deficiency | Original | Production Fix |
+| Deficiency | Jupyter Notebook | Production Fix |
 |---|---|---|
 | Data truncation | First 100,000 rows only (sequential bias) | Chunked stratified streaming — 500,000 rows preserving true class ratio |
 | Categorical encoding | `LabelEncoder` (ordinal treatment of `type`) | `pd.get_dummies` One-Hot Encoding |
